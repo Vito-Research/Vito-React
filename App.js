@@ -1,11 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import RNSamsungHealth from 'rn-samsung-health'
+import { useEffect } from 'react';
+import styles from './styles'
+import { styleProps } from 'react-native-web/dist/cjs/modules/forwardedProps';
 
 export default function App() {
+ 
   useEffect(()=>{
     health();
   },[])
+  
   const health = async() => {
     try{
       const auth = await RNSamsungHealth.authorize();
@@ -19,14 +24,14 @@ export default function App() {
     }
   }
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+    <View style={style.container}>
+      <Text style={styles.red}>Open up App.js to start working on your app!</Text>
       <StatusBar style="auto" />
     </View>
   );
 }
 
-const styles = StyleSheet.create({
+const style = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
