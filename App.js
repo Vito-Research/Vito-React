@@ -4,7 +4,7 @@ import RNSamsungHealth from 'rn-samsung-health'
 import { useEffect } from 'react';
 import styles from './styles'
 import { styleProps } from 'react-native-web/dist/cjs/modules/forwardedProps';
-
+import Home from './components/Home';
 export default function App() {
  
   useEffect(()=>{
@@ -25,7 +25,7 @@ export default function App() {
   }
   return (
     <View style={style.container}>
-      <Text style={styles.red}>Open up App.js to start working on your app!</Text>
+      <Home></Home>
       <StatusBar style="auto" />
     </View>
   );

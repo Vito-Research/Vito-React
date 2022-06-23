@@ -1,8 +1,19 @@
 import { StyleSheet, Text, View } from 'react-native';
-export default function App() {
+import Card from './Home/Card';
+import Explanation from './Home/Explaination';
+import Header from './Home/Header';
+import { StatusBar } from 'expo-status-bar';
+
+export default function Home() {
 return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+        <Header></Header>
+      <Card text="OK"></Card>
+      <View style={styles.closeStack}>
+      <Explanation icon = "A" text="Hello world, 1234556788"></Explanation>
+      <Explanation icon = "A" text="Hello world, 1234556788"></Explanation>
+      <Explanation icon = "A" text="Hello world, 1234556788"></Explanation>
+      </View>
       <StatusBar style="auto" />
     </View>
   );
@@ -10,9 +21,11 @@ return (
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  closeStack: {
+   height: '40%'
   },
 });
