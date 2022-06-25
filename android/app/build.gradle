@@ -141,6 +141,9 @@ android {
     compileSdkVersion rootProject.ext.compileSdkVersion
 
     defaultConfig {
+        manifestPlaceholders = [
+      appAuthRedirectScheme: 'com.Ai.Vito'
+    ]
         applicationId 'com.Ai.Vito'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
@@ -292,7 +295,7 @@ dependencies {
     //noinspection GradleDynamicVersion
     implementation "com.facebook.react:react-native:+"  // From node_modules
 
-
+    
     def isGifEnabled = (findProperty('expo.gif.enabled') ?: "") == "true";
     def isWebpEnabled = (findProperty('expo.webp.enabled') ?: "") == "true";
     def isWebpAnimatedEnabled = (findProperty('expo.webp.animated') ?: "") == "true";
@@ -336,7 +339,7 @@ dependencies {
     } else {
         implementation jscFlavor
     }
-    project(':rn-samsung-health') 
+    
 }
 
 if (isNewArchitectureEnabled()) {

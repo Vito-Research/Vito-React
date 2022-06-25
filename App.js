@@ -1,28 +1,39 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import RNSamsungHealth from 'rn-samsung-health'
+import { authorize } from 'react-native-app-auth';
 import { useEffect } from 'react';
-import styles from './styles'
-import { styleProps } from 'react-native-web/dist/cjs/modules/forwardedProps';
 import Home from './components/Home';
 export default function App() {
  
-  useEffect(()=>{
-    health();
-  },[])
-  
-  const health = async() => {
-    try{
-      const auth = await RNSamsungHealth.authorize();
-      let startDate = new Date().setDate(new Date().getDate()-30); // 30 days back date
-      let endDate = new Date().getTime(); //today's date
-      let opt = {startDate, endDate};
-      const steps = await RNSamsungHealth.getDailyStepCount(opt);
 
-    }catch(error){
-      console.log("error ", error)
-    }
-  }
+    const config = {
+      clientId: '2389P9',
+      clientSecret: '',
+      redirectUrl: 'https://andreasink.web.app', //note: path is required
+      scopes: ['heartrate'],
+      serviceConfiguration: {
+        authorizationEndpoint: 'https://www.fitbit.com/oauth2/authorize',
+        tokenEndpoint: 'https://api.fitbit.com/oauth2/token',
+        revocationEndpoint: 'https://api.fitbit.com/oauth2/revoke'
+      }
+    };
+    useEffect(() => {
+      // Update the document title using the browser API
+      try {
+        const result =  authorize(config);
+        console.log(result);
+        // result includes accessToken, accessTokenExpirationDate and refreshToken
+      } catch (error) {
+        console.log(error);
+      }
+    },[]);
+    // Log in to get an authentication token
+   
+
+   
+
+  
+
   return (
     <View style={style.container}>
       <Home></Home>

@@ -19,16 +19,9 @@ import expo.modules.ReactNativeHostWrapper;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
-import com.reactnative.samsunghealth.SamsungHealthPackage;
 public class MainApplication extends Application implements ReactApplication {
 
-  protected List<ReactPackage> getPackages() {
-    return Arrays.<ReactPackage>asList(
-        new MainReactPackage(),
-      
-        new SamsungHealthPackage(BuildConfig.APPLICATION_ID)  // add this line
-        );
-}
+
 
   private final ReactNativeHost mReactNativeHost = new ReactNativeHostWrapper(
     this,

@@ -4,25 +4,24 @@ import icon from "../../assets/favicon.png"
 export default function Header() {
 return (
     <View style={styles.container}>
-<Image  source={icon} />
+<Image style={styles.icon} source={icon} />
      
-<Image  source={icon} />
+<Image style={styles.icon2} source={icon} />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-    text: {
-    
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: "80%"
-  },
+   icon: {
+    marginRight: "25%",
+   },
+   icon2: {
+    marginLeft: "25%",
+   },
   container: {
-    paddingHorizontal:"10%",
     flexDirection: 'row',
     flex: 1,
-
+    flexGrow:1,
     color: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
