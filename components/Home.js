@@ -8,7 +8,7 @@ export default function Home() {
 return (
     <View style={styles.container}>
         <Header></Header>
-        <Text>Heart Rate Score</Text>
+        <Text style={styles.header}>Heart Rate Score</Text>
       <Card text="OK"></Card>
       <View style={styles.closeStack}>
       <Explanation icon = "A" text="Hello world, 1234556788"></Explanation>
@@ -32,5 +32,8 @@ const styles = StyleSheet.create({
   text: {
     alignItems: "left",
     alignText: "left",
+  },
+  header: {
+   fontSize: '22px',
   }
 });
