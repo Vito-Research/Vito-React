@@ -142,9 +142,9 @@ android {
 
     defaultConfig {
         manifestPlaceholders = [
-      appAuthRedirectScheme: 'com.Ai.Vito'
+      appAuthRedirectScheme: 'https://vitovitals.org'
     ]
-        applicationId 'com.Ai.Vito'
+        applicationId 'org.vitovitals'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
