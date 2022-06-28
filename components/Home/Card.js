@@ -16,8 +16,8 @@ const styles = StyleSheet.create({
     paddingHorizontal:"50%",
     backgroundColor: '#E74B3B',
     maxHeight: "20%",
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: 'left',
+    justifyContent: 'left',
   },
   good: {
     flex: 1,

@@ -34,6 +34,6 @@ const styles = StyleSheet.create({
     alignText: "left",
   },
   header: {
-   fontSize: '22px',
+   fontSize: 22,
   }
 });
