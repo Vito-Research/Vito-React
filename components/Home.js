@@ -5,15 +5,16 @@ import Header from './Home/Header';
 import { StatusBar } from 'expo-status-bar';
 
 export default function Home() {
+
+  const okExplain = [{icon: "A", title: "Not Medical Advice/Diagnosis/Treatment", text: "Always consult your doctor, this is only a data point to discus"}, {icon: "A", title: "Heart Rate Near Average", text: "Vito measures your heart rate while asleep to unlock insights into health"}];
 return (
     <View style={styles.container}>
         <Header></Header>
         <Text style={styles.header}>Heart Rate Score</Text>
       <Card text="OK"></Card>
       <View style={styles.closeStack}>
-      <Explanation icon = "A" text="Hello world, 1234556788"></Explanation>
-      <Explanation icon = "A" text="Hello world, 1234556788"></Explanation>
-      <Explanation icon = "A" text="Hello world, 1234556788"></Explanation>
+      
+      {Object.keys(okExplain).map((ok, i) => ( <Explanation icon={okExplain[i].icon} title={okExplain[i].title} text={okExplain[i].text}></Explanation>))}
       </View>
       <StatusBar style="auto" />
     </View>
@@ -27,7 +28,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   closeStack: {
-   height: '40%'
+   height: '60%'
   },
   text: {
     alignItems: "left",
