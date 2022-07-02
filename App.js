@@ -28,7 +28,7 @@ export default function App() {
     <View style={style.container}>
       <Text style={styles.red}>Open up App.js to start working on your app!</Text>
       <StatusBar style="auto" />
-      <BChart chartData={chartData1} containerWidth={"50%"} containerHeight={"50%"} Xkey={"uv"} Ykey={"pv"} width={"50%"} height={"50%"} barColor={"##000000"}/>
+      <BChart chartData={chartData1} containerWidth={"50%"} containerHeight={"50%"} key1={"uv"}  width={"50%"} height={"50%"}/>
     </View>
   );
 }
