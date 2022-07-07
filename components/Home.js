@@ -7,7 +7,7 @@ import { StatusBar } from 'expo-status-bar';
 
 export default function Home() {
 
-  const okExplain = [{icon: "A", title: "Not Medical Advice/Diagnosis/Treatment", text: "Always consult your doctor, this is only a data point to discus"}, {icon: "A", title: "Heart Rate Near Average", text: "Vito measures your heart rate while asleep to unlock insights into health"}];
+  const okExplain = [{icon: "A", title: "Not Medical Advice/Diagnosis/Treatment", text: "Always consult your doctor, this is only a data point to discuss"}, {icon: "A", title: "Heart Rate Near Average", text: "Vito measures your heart rate while asleep to unlock insights into health"}];
 
 //import BarChart from '.components/BarChart.js'
 

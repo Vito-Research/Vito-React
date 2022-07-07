@@ -51,7 +51,7 @@ export default function App() {
     <View style={style.container}>
       <Home></Home>
       <StatusBar style="auto" />
-      <BChart chartData={chartData1} containerWidth={"50%"} containerHeight={"50%"} key1={"uv"}  width={"50%"} height={"50%"}/>
+      {/* <BChart chartData={chartData1} containerWidth={"50%"} containerHeight={"50%"} key1={"uv"}  width={"50%"} height={"50%"}/> */}
     </View>
   );
 }
