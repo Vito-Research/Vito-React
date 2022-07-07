@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 import styles from './styles'
 import { styleProps } from 'react-native-web/dist/cjs/modules/forwardedProps';
 import BChart from './components/BarChart.js'
-
+import Home from './components/Home.js'
 export default function App() {
  
 
